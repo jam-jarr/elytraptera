@@ -1,0 +1,13 @@
+{
+  "itemGroup.elytraptera": "Example Mod Tab",
+  "block.elytraptera.example_block": "Example Block",
+  "item.elytraptera.example_item": "Example Item",
+
+  "elytraptera.configuration.title": "Elytraptera Configs",
+  "elytraptera.configuration.section.elytraptera.common.toml": "Elytraptera Configs",
+  "elytraptera.configuration.section.elytraptera.common.toml.title": "Elytraptera Configs",
+  "elytraptera.configuration.items": "Item List",
+  "elytraptera.configuration.logDirtBlock": "Log Dirt Block",
+  "elytraptera.configuration.magicNumberIntroduction": "Magic Number Text",
+  "elytraptera.configuration.magicNumber": "Magic Number"
+}
