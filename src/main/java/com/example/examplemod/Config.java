@@ -34,6 +34,40 @@ public class Config {
             .comment("A list of items to log on common setup.")
             .defineListAllowEmpty("items", List.of("minecraft:iron_ingot"), () -> "", Config::validateItemName);
 
+    // --- Flight configuration ---
+
+    public static final ModConfigSpec.DoubleValue HORIZONTAL_SPEED = BUILDER
+            .comment("Horizontal flight speed")
+            .defineInRange("horizontalSpeed", 0.5, 0.0, 10.0);
+
+    public static final ModConfigSpec.DoubleValue VERTICAL_SPEED = BUILDER
+            .comment("Vertical flight speed")
+            .defineInRange("verticalSpeed", 0.5, 0.0, 10.0);
+
+    public static final ModConfigSpec.IntValue BASE_STAMINA = BUILDER
+            .comment("Base stamina for flight")
+            .defineInRange("baseStamina", 100, 1, 1000);
+
+    public static final ModConfigSpec.DoubleValue FLY_STAMINA_DRAIN = BUILDER
+            .comment("Stamina drained per tick while flying")
+            .defineInRange("flyStaminaDrain", 1.0, 0.0, 100.0);
+
+    public static final ModConfigSpec.DoubleValue HOVER_STAMINA_DRAIN = BUILDER
+            .comment("Stamina drained per tick while hovering")
+            .defineInRange("hoverStaminaDrain", 0.2, 0.0, 100.0);
+
+    public static final ModConfigSpec.DoubleValue STAMINA_REGEN_RATE = BUILDER
+            .comment("Stamina regained per tick while not flying")
+            .defineInRange("staminaRegenRate", 0.5, 0.0, 100.0);
+
+    public static final ModConfigSpec.DoubleValue HOVER_DESCENT_SPEED = BUILDER
+            .comment("Vertical descent speed while hovering with shift held")
+            .defineInRange("hoverDescentSpeed", 0.3, 0.0, 5.0);
+
+    public static final ModConfigSpec.BooleanValue ALLOW_VANILLA_FLIGHT_SPRINT = BUILDER
+            .comment("Allow vanilla elytra flight while sprinting")
+            .define("allowVanillaFlightSprint", false);
+
     static final ModConfigSpec SPEC = BUILDER.build();
 
     private static boolean validateItemName(final Object obj) {

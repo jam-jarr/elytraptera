@@ -1,0 +1,11 @@
+{
+  "required": false,
+  "package": "com.example.examplemod.mixin.client",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "LocalPlayerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
